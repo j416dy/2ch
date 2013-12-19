@@ -1,0 +1,16 @@
+AddHandler cgi-script .htaccess
+AddHandler cgi-script .i
+XBitHack on
+ErrorDocument 404 http://www2.2ch.net/live.html
+ErrorDocument 403 http://server.maido3.com/
+Options ExecCGI Indexes FollowSymLinks Includes
+
+AcceptPathInfo On 
+AddDefaultCharset Off
+
+AddType text/plain dat
+AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/x-javascript
+
+order allow,deny
+allow from all
+deny from 72.167.0.0/16
